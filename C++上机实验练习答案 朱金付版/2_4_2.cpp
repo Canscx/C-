@@ -1,0 +1,31 @@
+#include<iostream.h>
+void main()
+{
+	double a,b,c;
+	cout<<"请输入三角形的边长"<<endl;
+	cin>>a>>b>>c;
+	if(a+b<=c||a+c<=b||b+c<=a)
+		cout<<"不能构成三角形!"<<endl;
+	else 
+	{
+		if(a*a+b*b==c*c||a*a+c*c==b*b||c*c+b*b==a*a)
+		{
+			if(a==b||a==c||b==c)
+				cout<<"该三角形为等腰直角三角形"<<endl;
+			else
+				cout<<"该三角形为直角三角形"<<endl;
+		}
+		else 
+		{
+			if(a==b||a==c||b==c)
+			{
+				if(a==b==c)
+					cout<<"该三角形为等边三角形"<<endl;
+				else
+					cout<<"该三角形为等腰三角形"<<endl;
+			}
+			else
+				cout<<"该三角形为非特殊三角形"<<endl;
+		}
+	}
+}
